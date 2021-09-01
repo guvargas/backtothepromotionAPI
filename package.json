@@ -1,0 +1,20 @@
+{
+  "name": "vrprojectapi",
+  "version": "1.0.0",
+  "description": "api vr project",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon",
+    "test": "jest --env node"
+  },
+  "author": "udesc",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "express": "^4.17.1",
+    "jest": "^27.0.6",
+    "node": "^16.5.0",
+    "nodemon": "^2.0.12",
+    "pg-promise": "^10.10.2"
+  }
+}
