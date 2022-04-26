@@ -23,14 +23,14 @@ test('Should get posts', async function () {
 	await postsService.deletePost(post3.id);
 });
 
-test('Should save a post', async function () {
+test.only('Should save a post', async function () {
 	const data = { acao: generate(), descricao: generate() };
 	const response = await request('http://localhost:3000/posts', 'post', data);
 	expect(response.status).toBe(201);
 	const post = response.data;
 	expect(post.acao).toBe(data.acao);
 	expect(post.descricao).toBe(data.descricao);
-	await postsService.deletePost(post.id);
+	//await postsService.deletePost(post.id);
 });
 
 test('Should not save a post', async function () {

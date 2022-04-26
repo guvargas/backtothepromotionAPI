@@ -4,7 +4,7 @@ const db = pgp({
 	password: '1234',
 	host: 'localhost',
 	port: 5432,
-	database: 'VRproject'
+	database: 'testevarguitas'
 });
 
 module.exports = db;

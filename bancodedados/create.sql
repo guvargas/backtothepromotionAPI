@@ -1,8 +1,8 @@
-create schema acoes
+create schema jogo;
 
-create table acoes.post(
-    id serial primary key,
-    acao text not null,
-    descricao text not null,
+create table jogo.tb_falas_salvas(
+    idFalaSalva text primary key,
+    texto text not null,
+    categoria text not null,
     data timestamp default now()
-)
+);
