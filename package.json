@@ -4,7 +4,7 @@
   "description": "api vr project",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon",
+    "dev": "nodemon server/server.js",
     "test": "jest --env node"
   },
   "author": "udesc",
