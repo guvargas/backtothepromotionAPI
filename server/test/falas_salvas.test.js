@@ -21,14 +21,14 @@ test("Should save a fala", async function () {
   const data = {
     texto: generate(),
     categoria: generate(),
-    idFalaSalva: generate(),
+    idSingleLine: generate(),
   };
   const response = await request("http://localhost:3000/falas_salvas", "post", data);
   expect(response.status).toBe(201);
   const fala_salva = response.data;
   expect(fala_salva.texto).toBe(data.texto);
   expect(fala_salva.categoria).toBe(data.categoria);
-  expect(fala_salva.idFalaSalva).toBe(data.idFalaSalva);
+  expect(fala_salva.idSingleLine).toBe(data.idsingleline);
  //depois deletar
   //await postsService.deletePost(post.id);
 });
