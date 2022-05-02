@@ -18,6 +18,7 @@ const request = function (url, method, data) {
 test("Should save a fala", async function () {
   const data = gerador.generateFala_salva();
   const response = await request("http://localhost:8000/falas_salvas", "post", data);
+  console.log(response.data);
   expect(response.status).toBe(201);
   const fala_salva = response.data;
   expect(fala_salva.texto).toBe(data.texto);
