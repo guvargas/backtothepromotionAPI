@@ -2,9 +2,7 @@ const crypto = require("crypto");
 const axios = require("axios");
 const postsService = require("../service/falas_salvasService");
 
-const generate = function () {
-  return crypto.randomBytes(20).toString("hex");
-};
+const gerador = require('../helper/gerador');
 
 const request = function (url, method, data) {
   return axios({ url, method, data, validateStatus: false });
@@ -18,12 +16,8 @@ const request = function (url, method, data) {
 */
 
 test("Should save a fala", async function () {
-  const data = {
-    texto: generate(),
-    categoria: generate(),
-    idSingleLine: generate(),
-  };
-  const response = await request("http://localhost:3000/falas_salvas", "post", data);
+  const data = gerador.generateFala_salva();
+  const response = await request("http://localhost:8000/falas_salvas", "post", data);
   expect(response.status).toBe(201);
   const fala_salva = response.data;
   expect(fala_salva.texto).toBe(data.texto);
