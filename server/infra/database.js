@@ -4,7 +4,7 @@ const db = pgp({
 	password: '1234',
 	host: 'localhost',
 	port: 5432,
-	database: 'Back_to_the_promotion'
+	database: 'temporarydata'
 });
 
 module.exports = db;

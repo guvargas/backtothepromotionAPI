@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS tb_falas_salvas(
     identificador_original varchar(255),
     texto varchar(255),
     categoria varchar(255),
-    horario varchar(255)
+    horario  TIMESTAMPTZ DEFAULT Now() 
 );
 CREATE TABLE IF NOT EXISTS associacao_player_falas_salvas(
     id_player serial not null,
@@ -34,9 +34,9 @@ CREATE TABLE IF NOT EXISTS tb_escolha_minigame(
     id_escolha_minigame serial NOT NULL PRIMARY KEY,
     identificador_original varchar(255),
     texto varchar(255),
-    esta_certo BIT,
+    esta_certo boolean,
     botao_clicado varchar(255),
-    horario varchar(255)
+    horario  TIMESTAMPTZ DEFAULT Now() 
 );
 CREATE TABLE IF NOT EXISTS associacao_player_escolhas_minigame(
     id_player serial not null,
@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS associacao_player_escolhas_minigame(
 CREATE TABLE IF NOT EXISTS tb_clicks(
     id_click serial NOT NULL PRIMARY KEY,
     objeto varchar(255),
-    horario varchar(255)
+    horario  TIMESTAMPTZ DEFAULT Now() 
 );
 CREATE TABLE IF NOT EXISTS associacao_player_clicks(
     id_player serial not null,
@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS associacao_player_clicks(
 CREATE TABLE IF NOT EXISTS tb_fluxo(
     id_fluxo serial NOT NULL PRIMARY KEY,
     identificador_original varchar(255),
-    horario varchar(255)
+    horario  TIMESTAMPTZ DEFAULT Now() 
 );
 CREATE TABLE IF NOT EXISTS associacao_player_fluxo(
     id_player serial not null,

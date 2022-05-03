@@ -29,10 +29,49 @@ this.generatePlayer = function () {
   });
 };
 
+this.generateClick = function () {
+  return (data = {
+    objeto: generate(),
+  });
+};
+
+
+this.generateFluxo = function () {
+  return (data = {
+    identificador_original: generate(),
+  });
+};
+
+
+
 this.generateFala_salva = function () {
   return (data = {
     texto: generate(),
     categoria: generate(),
-    idSingleLine: generate(),
+    identificador_original: generate(),
   });
 };
+
+this.generateEscolhaMinigame = function () {
+  let meudeus = true;
+  if (Math.round(Math.random()) ==0 ) {
+    meudeus = false;
+  }
+
+  return (data = {
+    esta_certo: meudeus,
+    texto: generate(),
+    identificador_original: generate(),
+    botao_clicado: generate(),
+  });
+};
+
+/*
+CREATE TABLE IF NOT EXISTS tb_falas_salvas(
+    id_fala serial NOT NULL PRIMARY KEY,
+    identificador_original varchar(255),
+    texto varchar(255),
+    categoria varchar(255),
+    horario varchar(255)
+);
+*/

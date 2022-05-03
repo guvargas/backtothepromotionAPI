@@ -9,10 +9,13 @@ const request = function (url, method, data) {
 };
 
 /*
- idFalaSalva text primary key,
-    texto text not null,
-    categoria text not null,
-    data timestamp default now()
+CREATE TABLE IF NOT EXISTS tb_falas_salvas(
+    id_fala serial NOT NULL PRIMARY KEY,
+    identificador_original varchar(255),
+    texto varchar(255),
+    categoria varchar(255),
+    horario varchar(255)
+);
 */
 
 test("Should save a fala", async function () {
@@ -23,7 +26,8 @@ test("Should save a fala", async function () {
   const fala_salva = response.data;
   expect(fala_salva.texto).toBe(data.texto);
   expect(fala_salva.categoria).toBe(data.categoria);
-  expect(fala_salva.idSingleLine).toBe(data.idsingleline);
+  expect(fala_salva.identificador_original).toBe(data.identificador_original);
  //depois deletar
   //await postsService.deletePost(post.id);
 });
+
