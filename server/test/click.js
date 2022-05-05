@@ -19,18 +19,21 @@ CREATE TABLE IF NOT EXISTS tb_escolha_minigame(
 );
 */
 
-test("Should save a escolha minigame", async function () {
+test("Should save a player and a click and associate the two", async function () {
+  const player = gerador.generatePlayer();
+  const responsePlayer = await request("http://localhost:8000/player", "post", player);
+  expect(responsePlayer.status).toBe(201);
   const data = gerador.generateClick();
   const respostaClick = await request(
-    "http://localhost:8000/click",
+   `http://localhost:8000/click/${responsePlayer.data.id_player}`,
     "post",
     data
   );
-  console.log(respostaClick.data);
+ // console.log(respostaClick.data);
   expect(respostaClick.status).toBe(201);
-  const fala_salva = respostaClick.data;
-  expect(fala_salva.objeto).toBe(data.objeto);
-  // const response = await request("http://localhost:8000/associa", "post", data);
+  expect(respostaClick.data.objeto).toBe(data.objeto);
   //depois deletar
-  //await postsService.deletePost(post.id);
+
+  await deleteService.delete(responsePlayer.data.id_player);
 });
+const deleteService = require("../service/deleteService");

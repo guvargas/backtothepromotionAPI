@@ -6,6 +6,12 @@ exports.saveAluno = async function (aluno) {
   return alunosData.saveAluno(aluno);
 };
 
+exports.getAluno = async function (aluno) {
+  return alunosData.getAlunoByMatricula(aluno);
+};
+
+
+
 /*
 id_aluno serial not null PRIMARY KEY,
     matricula varchar(255) UNIQUE,

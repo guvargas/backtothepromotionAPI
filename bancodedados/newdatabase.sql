@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS tb_escolha_minigame(
     botao_clicado varchar(255),
     horario  TIMESTAMPTZ DEFAULT Now() 
 );
-CREATE TABLE IF NOT EXISTS associacao_player_escolhas_minigame(
+CREATE TABLE IF NOT EXISTS associacao_player_escolha_minigame(
     id_player serial not null,
     id_escolha_minigame serial not null,
     FOREIGN KEY (id_player) REFERENCES tb_player(id_player),

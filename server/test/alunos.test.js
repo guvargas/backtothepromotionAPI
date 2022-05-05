@@ -12,6 +12,22 @@ const request = function (url, method, data) {
 
 
 
+test.only("Should get an aluno by its matricula", async function () {
+  //const data=gerador.generateAluno();
+  const response = await request(`http://localhost:8000/alunos/${123}`, "get");
+  expect(response.status).toBe(201);
+
+ console.log(response.data);
+  const fala_salva = response.data;
+  expect(fala_salva.matricula).toBe("123");
+  //expect(fala_salva.nome).toBe(data.nome);
+ // expect(fala_salva.senha).toBe(data.senha);
+  
+ //depois deletar
+  //await postsService.deletePost(post.id);
+});
+
+
 test("Should save an aluno", async function () {
   const data=gerador.generateAluno();
   const response = await request("http://localhost:8000/alunos", "post", data);

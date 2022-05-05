@@ -13,5 +13,15 @@ router.post('/alunos', async function (req, res, next) {
 	}
 });
 
+router.get('/alunos/:matricula', async function (req, res, next) {
+	const aluno = req.body;
+	try {
+		const newAluno = await alunosService.getAluno(req.params.matricula);
+		res.status(201).json(newAluno);
+	} catch (e) {
+		next(e);
+	}
+});
+
 
 module.exports = router;
