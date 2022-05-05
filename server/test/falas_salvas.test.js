@@ -1,6 +1,7 @@
 const crypto = require("crypto");
 const axios = require("axios");
 const deleteService = require("../service/deleteService");
+require('dotenv').config();
 
 const gerador = require("../helper/gerador");
 
@@ -21,14 +22,14 @@ CREATE TABLE IF NOT EXISTS tb_falas_salvas(
 test("Should save a player and a fala and associate the two", async function () {
   const player = gerador.generatePlayer();
   const responsePlayer = await request(
-    "http://localhost:8000/player",
+    process.env.url_default+"player",
     "post",
     player
   );
   expect(responsePlayer.status).toBe(201);
   const data = gerador.generateFala_salva();
   const response = await request(
-    `http://localhost:8000/falas_salvas/${responsePlayer.data.id_player}`,
+    process.env.url_default+`falas_salvas/${responsePlayer.data.id_player}`,
     "post",
     data
   );

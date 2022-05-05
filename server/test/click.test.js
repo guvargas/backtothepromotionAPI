@@ -1,7 +1,7 @@
+require('dotenv').config();
 const crypto = require("crypto");
 const axios = require("axios");
 const postsService = require("../service/escolha_minigameService");
-
 const gerador = require("../helper/gerador");
 
 const request = function (url, method, data) {
@@ -21,11 +21,12 @@ CREATE TABLE IF NOT EXISTS tb_escolha_minigame(
 
 test("Should save a player and a click and associate the two", async function () {
   const player = gerador.generatePlayer();
-  const responsePlayer = await request("http://localhost:8000/player", "post", player);
+  console.log(process.env.URL_DEFAULT);
+  const responsePlayer = await request(process.env.URL_DEFAULT+"player", "post", player);
   expect(responsePlayer.status).toBe(201);
   const data = gerador.generateClick();
   const respostaClick = await request(
-   `http://localhost:8000/click/${responsePlayer.data.id_player}`,
+    process.env.URL_DEFAULT+`click/${responsePlayer.data.id_player}`,
     "post",
     data
   );

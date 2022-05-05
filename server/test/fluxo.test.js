@@ -1,5 +1,6 @@
 const crypto = require("crypto");
 const axios = require("axios");
+require('dotenv').config();
 
 const gerador = require("../helper/gerador");
 
@@ -20,11 +21,11 @@ CREATE TABLE IF NOT EXISTS tb_escolha_minigame(
 
 test("Should save a player and a fluxo and associate the two", async function () {
   const player = gerador.generatePlayer();
-  const responsePlayer = await request("http://localhost:8000/player", "post", player);
+  const responsePlayer = await request(process.env.url_default+"player", "post", player);
   expect(responsePlayer.status).toBe(201);
   const data = gerador.generateFluxo();
   const respostaFluxo = await request(
-    `http://localhost:8000/fluxo/${responsePlayer.data.id_player}`,
+    process.env.url_default+`fluxo/${responsePlayer.data.id_player}`,
     "post",
     data
   );

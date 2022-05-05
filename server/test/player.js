@@ -3,6 +3,7 @@ const axios = require("axios");
 const playerService = require("../service/playerService");
 const { log } = require("console");
 const gerador = require("../helper/gerador");
+require('dotenv').config();
 
 /*
   id_player serial not null PRIMARY KEY,
@@ -18,7 +19,7 @@ const request = function (url, method, data) {
 
 test("Should save a player", async function () {
   const data = gerador.generatePlayer();
-  const response = await request("http://localhost:8000/player", "post", data);
+  const response = await request(process.env.url_default+"player", "post", data);
 
   expect(response.status).toBe(201);
 

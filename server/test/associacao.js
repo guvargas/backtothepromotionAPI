@@ -3,6 +3,7 @@ const axios = require("axios");
 const associacaoService = require("../service/associacaoService");
 const { log } = require("console");
 const gerador = require("../helper/gerador");
+require('dotenv').config();
 
 /*
   id_player serial not null PRIMARY KEY,
@@ -21,7 +22,7 @@ test("Should associate a player to an aluno", async function () {
   const aluno = gerador.generateAluno();
 
   const responsePlayer = await request(
-    "http://localhost:8000/player",
+    process.env.URL_DEFAULT+"player",
     "post",
     player
   );
@@ -29,7 +30,7 @@ test("Should associate a player to an aluno", async function () {
   const player_salvo = responsePlayer.data;
 
   const responseAluno = await request(
-    "http://localhost:8000/alunos",
+    process.env.URL_DEFAULT+"alunos",
     "post",
     aluno
   );
@@ -37,7 +38,7 @@ test("Should associate a player to an aluno", async function () {
   const aluno_salvo = responseAluno.data;
 
   const response = await request(
-    `http://localhost:8000/associar/player/${player_salvo.id_player}/aluno/${aluno_salvo.id_aluno}`,
+    process.env.url_default+`associar/player/${player_salvo.id_player}/aluno/${aluno_salvo.id_aluno}`,
     "post"
   );
   log(response.data);
@@ -55,7 +56,7 @@ test("Should associate a player to a click", async function () {
   const click = gerador.generateClick();
 
   const responsePlayer = await request(
-    "http://localhost:8000/player",
+    process.env.URL_DEFAULT+"player",
     "post",
     player
   );
@@ -63,7 +64,7 @@ test("Should associate a player to a click", async function () {
   const player_salvo = responsePlayer.data;
 
   const responseClick = await request(
-    "http://localhost:8000/click",
+    process.env.URL_DEFAULT+"click",
     "post",
     click
   );
@@ -71,7 +72,7 @@ test("Should associate a player to a click", async function () {
   const clickResponse = responseClick.data;
 
   const response = await request(
-    `http://localhost:8000/associar/player/${player_salvo.id_player}/click/${clickResponse.id_click}`,
+    process.env.url_default+`associar/player/${player_salvo.id_player}/click/${clickResponse.id_click}`,
     "post"
   );
   //log(response.data);
@@ -90,7 +91,7 @@ test("Should associate a player to a fluxo", async function () {
   const fluxo = gerador.generateFluxo();
 
   const responsePlayer = await request(
-    "http://localhost:8000/player",
+    process.env.URL_DEFAULT+"player",
     "post",
     player
   );
@@ -98,7 +99,7 @@ test("Should associate a player to a fluxo", async function () {
   const player_salvo = responsePlayer.data;
 
   const responseFluxo = await request(
-    "http://localhost:8000/fluxo",
+    process.env.URL_DEFAULT+"fluxo",
     "post",
     fluxo
   );
@@ -106,7 +107,7 @@ test("Should associate a player to a fluxo", async function () {
   const FluxoResponse = responseFluxo.data;
 
   const response = await request(
-    `http://localhost:8000/associar/player/${player_salvo.id_player}/fluxo/${FluxoResponse.id_fluxo}`,
+    process.env.url_default+`associar/player/${player_salvo.id_player}/fluxo/${FluxoResponse.id_fluxo}`,
     "post"
   );
   //log(response.data);

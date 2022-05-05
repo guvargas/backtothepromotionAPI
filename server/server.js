@@ -1,5 +1,7 @@
 const express = require('express');
-const app = express();
+const app = express();require('dotenv').config();
+
+require('dotenv').config();
 
 app.use(express.json());
 
@@ -22,4 +24,4 @@ app.use(function (error, req, res, next) {
 	res.status(500).send(error.message);
 });
 
-app.listen(8000);
+app.listen(process.env.PORTA);
