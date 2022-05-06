@@ -15,7 +15,7 @@ const request = function (url, method, data) {
 
 test.only("Should get an aluno by its matricula", async function () {
   //const data=gerador.generateAluno();
-  const response = await request(process.env.url_default+`alunos/${123}`, "get");
+  const response = await request(`${process.env.URL_DEFAULT}/alunos/${123}`, "get");
   expect(response.status).toBe(201);
 
  console.log(response.data);
@@ -31,7 +31,7 @@ test.only("Should get an aluno by its matricula", async function () {
 
 test("Should save an aluno", async function () {
   const data=gerador.generateAluno();
-  const response = await request(process.env.url_default+"alunos", "post", data);
+  const response = await request(`${process.env.URL_DEFAULT}/alunos`, "post", data);
  
   expect(response.status).toBe(201);
 

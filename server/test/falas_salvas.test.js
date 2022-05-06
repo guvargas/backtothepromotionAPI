@@ -22,18 +22,18 @@ CREATE TABLE IF NOT EXISTS tb_falas_salvas(
 test("Should save a player and a fala and associate the two", async function () {
   const player = gerador.generatePlayer();
   const responsePlayer = await request(
-    process.env.url_default+"player",
+   `${process.env.URL_DEFAULT}/player`,
     "post",
     player
   );
   expect(responsePlayer.status).toBe(201);
   const data = gerador.generateFala_salva();
   const response = await request(
-    process.env.url_default+`falas_salvas/${responsePlayer.data.id_player}`,
+    `${process.env.URL_DEFAULT}/falas_salvas/${responsePlayer.data.id_player}`,
     "post",
     data
   );
-  //console.log(response.data);
+  console.log(response.data);
   expect(response.status).toBe(201);
   const fala_salva = response.data;
   expect(fala_salva.texto).toBe(data.texto);

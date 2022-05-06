@@ -22,7 +22,7 @@ test("Should associate a player to an aluno", async function () {
   const aluno = gerador.generateAluno();
 
   const responsePlayer = await request(
-    process.env.URL_DEFAULT+"player",
+    `${process.env.URL_DEFAULT}/player`,
     "post",
     player
   );
@@ -30,7 +30,7 @@ test("Should associate a player to an aluno", async function () {
   const player_salvo = responsePlayer.data;
 
   const responseAluno = await request(
-    process.env.URL_DEFAULT+"alunos",
+    `${process.env.URL_DEFAULT}/alunos`,
     "post",
     aluno
   );
@@ -38,7 +38,7 @@ test("Should associate a player to an aluno", async function () {
   const aluno_salvo = responseAluno.data;
 
   const response = await request(
-    process.env.url_default+`associar/player/${player_salvo.id_player}/aluno/${aluno_salvo.id_aluno}`,
+    `${process.env.URL_DEFAULT}/associar/player/${player_salvo.id_player}/aluno/${aluno_salvo.id_aluno}`,
     "post"
   );
   log(response.data);
@@ -72,7 +72,7 @@ test("Should associate a player to a click", async function () {
   const clickResponse = responseClick.data;
 
   const response = await request(
-    process.env.url_default+`associar/player/${player_salvo.id_player}/click/${clickResponse.id_click}`,
+    `${process.env.URL_DEFAULT}/associar/player/${player_salvo.id_player}/click/${clickResponse.id_click}`,
     "post"
   );
   //log(response.data);
@@ -91,7 +91,7 @@ test("Should associate a player to a fluxo", async function () {
   const fluxo = gerador.generateFluxo();
 
   const responsePlayer = await request(
-    process.env.URL_DEFAULT+"player",
+    `${process.env.URL_DEFAULT}/player`,
     "post",
     player
   );
@@ -99,7 +99,7 @@ test("Should associate a player to a fluxo", async function () {
   const player_salvo = responsePlayer.data;
 
   const responseFluxo = await request(
-    process.env.URL_DEFAULT+"fluxo",
+    `${process.env.URL_DEFAULT}/fluxo`,
     "post",
     fluxo
   );
@@ -107,7 +107,7 @@ test("Should associate a player to a fluxo", async function () {
   const FluxoResponse = responseFluxo.data;
 
   const response = await request(
-    process.env.url_default+`associar/player/${player_salvo.id_player}/fluxo/${FluxoResponse.id_fluxo}`,
+    `${process.env.URL_DEFAULT}/associar/player/${player_salvo.id_player}/fluxo/${FluxoResponse.id_fluxo}`,
     "post"
   );
   //log(response.data);
