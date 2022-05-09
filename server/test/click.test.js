@@ -34,6 +34,6 @@ test("Should save a player and a click and associate the two", async function ()
   expect(respostaClick.data.objeto).toBe(data.objeto);
   //depois deletar
 
-  await deleteService.delete(responsePlayer.data.id_player);
+  //await deleteService.delete(responsePlayer.data.id_player);
 });
 const deleteService = require("../service/deleteService");
