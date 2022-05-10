@@ -17,12 +17,15 @@ const request = function (url, method, data) {
   return axios({ url, method, data, validateStatus: false });
 };
 
-test("Should save a player", async function () {
+test("Should generate an aluno and a player and associate the two", async function () {
+  const dataAluno=gerador.generateAluno();
+  const responseAluno = await request(`${process.env.URL_DEFAULT}/alunos`, "post", dataAluno);
+
+
   const data = gerador.generatePlayer();
-  const response = await request(`${process.env.URL_DEFAULT}/player`, "post", data);
+  const response = await request(`${process.env.URL_DEFAULT}/player/${responseAluno.data.id_aluno}`, "post", data);
 
   expect(response.status).toBe(201);
-
   const player_salvo = response.data;
   expect(player_salvo.posicao).toBe(data.posicao);
   expect(player_salvo.volume_falas).toBe(data.volume_falas);
