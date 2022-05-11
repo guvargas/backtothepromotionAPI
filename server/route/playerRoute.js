@@ -8,7 +8,7 @@ router.post("/player/:id_aluno", async function (req, res, next) {
   try {
     const newPlayer = await playerService.savePlayer(player);
     const response = await associacaoService.associarPlayerAluno(
-		newData.id_player,
+      newPlayer.id_player,
 		req.params.id_aluno
     );
     res.status(201).json(newPlayer);

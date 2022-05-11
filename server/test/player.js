@@ -21,10 +21,11 @@ test("Should generate an aluno and a player and associate the two", async functi
   const dataAluno=gerador.generateAluno();
   const responseAluno = await request(`${process.env.URL_DEFAULT}/alunos`, "post", dataAluno);
 
-
+  
   const data = gerador.generatePlayer();
   const response = await request(`${process.env.URL_DEFAULT}/player/${responseAluno.data.id_aluno}`, "post", data);
-
+  
+  
   expect(response.status).toBe(201);
   const player_salvo = response.data;
   expect(player_salvo.posicao).toBe(data.posicao);
