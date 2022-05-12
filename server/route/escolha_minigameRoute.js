@@ -5,7 +5,6 @@ const associacaoService = require("../service/associacaoService");
 
 router.post("/escolha_minigame/:id_player", async function (req, res, next) {
   const data = req.body;
-  console.log(data);
   try {
     const newData = await escolha_minigameService.saveEscolhaMinigame(data);
     const respostaFluxo = await associacaoService.associarPlayerEscolhaMinigame(
