@@ -11,19 +11,8 @@ exports.getFalaByID = function (fala) {
     [fala]
   );
 };
-
-
-function getHorario(){
-// current timestamp in milliseconds
-let ts = Date.now();
-const d = new Date();
-let date_ob = new Date(ts);
-let date = date_ob.getDate();
-let month = date_ob.getMonth() + 1;
-let year = date_ob.getFullYear();
-const fnal = year + "-" + month + "-" + date;
-// prints date & time in YYYY-MM-DD format
-console.log(d);
-console.log(fnal);
-return d;
-}
+exports.getFalas = function () {
+  return database.many(
+    "SELECT  ta.matricula, ta.nome, apfs.id_player, tfs.categoria, tfs.identificador_original, tfs.horario      FROM tb_aluno ta    INNER JOIN associacao_player_aluno apl    ON ta.id_aluno = apl.id_aluno    INNER JOIN associacao_player_falas_salvas apfs    ON apl.id_player = apfs.id_player    INNER JOIN tb_falas_salvas tfs     ON tfs.id_fala = apfs.id_fala;"
+  );
+};

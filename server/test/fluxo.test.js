@@ -1,6 +1,7 @@
 const crypto = require("crypto");
 const axios = require("axios");
 require('dotenv').config();
+const deleteService = require("../service/deleteService");
 
 const gerador = require("../helper/gerador");
 
@@ -38,4 +39,4 @@ test("Should save a player and a fluxo and associate the two", async function ()
 
   await deleteService.delete(responsePlayer.data.id_player);
 });
-const deleteService = require("../service/deleteService");
+

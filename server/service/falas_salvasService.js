@@ -6,3 +6,8 @@ exports.saveFala = async function (fala) {
 //  if (existingFala) throw new Error("Fala already exists");
   return fala_salvaData.saveFala(fala);
 };
+exports.getFalas = async function () {
+  // const existingFala = await fala_salvaData.getFalaByID(fala.idSingleLine);
+ //  if (existingFala) throw new Error("Fala already exists");
+   return fala_salvaData.getFalas();
+ };

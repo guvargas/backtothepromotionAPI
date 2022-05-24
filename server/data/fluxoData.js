@@ -8,6 +8,19 @@ exports.saveFluxo = function (data) {
   );
 };
 
+exports.getFluxos = function () {
+  return database.many(
+    " select id_aluno, identificador_original, horario from associacao_player_aluno apl"+
+    " INNER JOIN associacao_player_fluxo apf"+
+    " ON apl.id_player = apf.id_player"+
+    " INNER JOIN tb_fluxo tf"+
+    " ON tf.id_fluxo = apf.id_fluxo"+
+    " where apl.id_aluno != 38"+
+    " order by tf.horario;"
+  );
+};
+
+
 /*
 CREATE TABLE IF NOT EXISTS tb_escolha_minigame(
     id_escolha_minigame serial NOT NULL PRIMARY KEY,

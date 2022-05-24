@@ -6,6 +6,11 @@ exports.saveEscolhaMinigame = async function (data) {
   return escolha_minigameData.saveEscolhaMinigame(data);
 };
 
+exports.getEscolhas= async function () {
+  // const existingAluno = await escolha_minigameData.getAlunoByMatricula(aluno.matricula);
+  // if (existingAluno) throw new Error("Aluno already exists");
+   return escolha_minigameData.getEscolhas();
+ };
 /*
 id_aluno serial not null PRIMARY KEY,
     matricula varchar(255) UNIQUE,

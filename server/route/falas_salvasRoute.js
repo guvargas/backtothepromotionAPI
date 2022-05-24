@@ -19,5 +19,14 @@ router.post('/falas_salvas/:id_player', async function (req, res, next) {
 	}
 });
 
+router.get('/falas_salvas/showall',async function(req, res,next){
+	const data = req.body;
+	try {
+		const newData = await falas_salvasService.getFalas();
+		res.status(201).json(newData);
+	} catch (e) {
+		next(e);
+	}
+});
 
 module.exports = router;

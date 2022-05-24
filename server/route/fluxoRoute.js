@@ -14,5 +14,16 @@ router.post('/fluxo/:id_player', async function (req, res, next) {
 	}
 });
 
+router.get('/fluxos/showall', async function (req, res, next) {
+	
+	const data = req.body;
+	try {
+		const newData = await fluxoService.getFluxos();
+		res.status(201).json(newData);
+	} catch (e) {
+		next(e);
+	}
+});
+
 
 module.exports = router;
