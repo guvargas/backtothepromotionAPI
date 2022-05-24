@@ -18,7 +18,6 @@ router.post("/escolha_minigame/:id_player", async function (req, res, next) {
 });
 
 router.get("/escolha_minigame/showall",async function(req, res,next){
-  console.log("chegou aqui");
 	const data = req.body;
 	try {
 		const newData = await escolha_minigameService.getEscolhas();
