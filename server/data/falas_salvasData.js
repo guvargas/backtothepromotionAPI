@@ -13,6 +13,6 @@ exports.getFalaByID = function (fala) {
 };
 exports.getFalas = function () {
   return database.many(
-    "SELECT  ta.matricula, ta.nome, apfs.id_player, tfs.categoria, tfs.identificador_original, tfs.horario      FROM tb_aluno ta    INNER JOIN associacao_player_aluno apl    ON ta.id_aluno = apl.id_aluno    INNER JOIN associacao_player_falas_salvas apfs    ON apl.id_player = apfs.id_player    INNER JOIN tb_falas_salvas tfs     ON tfs.id_fala = apfs.id_fala;"
+    "SELECT  ta.id_aluno, apfs.id_player, tfs.categoria, tfs.identificador_original, tfs.horario      FROM tb_aluno ta    INNER JOIN associacao_player_aluno apl    ON ta.id_aluno = apl.id_aluno    INNER JOIN associacao_player_falas_salvas apfs    ON apl.id_player = apfs.id_player    INNER JOIN tb_falas_salvas tfs     ON tfs.id_fala = apfs.id_fala;"
   );
 };
