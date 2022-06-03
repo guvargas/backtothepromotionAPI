@@ -15,7 +15,6 @@ exports.getFluxos = function () {
     " ON apl.id_player = apf.id_player"+
     " INNER JOIN tb_fluxo tf"+
     " ON tf.id_fluxo = apf.id_fluxo"+
-    " where apl.id_aluno != 38"+
     " order by tf.horario;"
   );
 };
