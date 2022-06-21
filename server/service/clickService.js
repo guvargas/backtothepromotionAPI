@@ -12,3 +12,11 @@ matricula varchar(255) UNIQUE,
 nome varchar(255),
 senha varchar(255)
 */
+
+exports.getClicks = async function () {
+  // const existingAluno = await escolha_minigameData.getAlunoByMatricula(aluno.matricula);
+  // if (existingAluno) throw new Error("Aluno already exists");
+
+  return clickData.getClicks();
+};
+

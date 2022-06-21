@@ -18,4 +18,16 @@ router.post("/click/:id_player", async function (req, res, next) {
   }
 });
 
+
+router.get('/click/showall', async function (req, res, next) {
+	
+	const data = req.body;
+	try {
+		const newData = await clickService.getClicks();
+		res.status(201).json(newData);
+	} catch (e) {
+		next(e);
+	}
+});
+
 module.exports = router;
