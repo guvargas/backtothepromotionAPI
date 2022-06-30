@@ -13,7 +13,7 @@ exports.saveEscolhaMinigame = function (data) {
 
 exports.getEscolhas = function () {
   return database.manyOrNone(
-    "SELECT tem.identificador_original, tem.esta_certo, tem.texto, tem.botao_clicado, (SELECT apl.id_aluno FROM associacao_player_aluno apl WHERE apl.id_player = apem.id_player ) FROM associacao_player_escolha_minigame apem INNER JOIN tb_escolha_minigame tem ON apem.id_escolha_minigame = tem.id_escolha_minigame;"
+    "SELECT tem.horario, tem.identificador_original, tem.esta_certo, tem.texto, tem.botao_clicado, (SELECT apl.id_aluno FROM associacao_player_aluno apl WHERE apl.id_player = apem.id_player ) FROM associacao_player_escolha_minigame apem INNER JOIN tb_escolha_minigame tem ON apem.id_escolha_minigame = tem.id_escolha_minigame;"
     );
 };
 
