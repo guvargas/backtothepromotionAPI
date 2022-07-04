@@ -3,7 +3,7 @@ const router = express.Router();
 const clickService = require("../service/clickService");
 const associacaoService = require("../service/associacaoService");
 
-router.post("/click/:id_player", async function (req, res, next) {
+router.post("/:id_player", async function (req, res, next) {
   const data = req.body;
   //	console.log(req.body);
   try {
@@ -19,7 +19,7 @@ router.post("/click/:id_player", async function (req, res, next) {
 });
 
 
-router.get('/click/showall', async function (req, res, next) {
+router.get('/showall', async function (req, res, next) {
 	
 	const data = req.body;
 	try {

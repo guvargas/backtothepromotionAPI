@@ -3,7 +3,7 @@ const router = express.Router();
 const fluxoService = require('../service/fluxoService');
 const associacaoService = require('../service/associacaoService');
 
-router.post('/fluxo/:id_player', async function (req, res, next) {
+router.post('/:id_player', async function (req, res, next) {
 	const data = req.body;
 	try {
 		const newData = await fluxoService.saveFluxo(data);
@@ -14,7 +14,7 @@ router.post('/fluxo/:id_player', async function (req, res, next) {
 	}
 });
 
-router.get('/fluxos/showall', async function (req, res, next) {
+router.get('/showall', async function (req, res, next) {
 	
 	const data = req.body;
 	try {

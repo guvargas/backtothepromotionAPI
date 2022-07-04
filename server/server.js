@@ -5,14 +5,14 @@ require('dotenv').config();
 
 app.use(express.json());
 
-app.use('/', require('./route/postsRoute'));
-app.use('/', require('./route/falas_salvasRoute'));
-app.use('/', require('./route/alunosRoute'));
-app.use('/', require('./route/playerRoute'));
-app.use('/', require('./route/associacaoRoute'));
-app.use('/', require('./route/clickRoute'));
-app.use('/', require('./route/escolha_minigameRoute'));
-app.use('/', require('./route/fluxoRoute'));
+app.use('/posts', require('./route/postsRoute'));
+app.use('/falas_salvas', require('./route/falas_salvasRoute'));
+app.use('/alunos', require('./route/alunosRoute'));
+app.use('/players', require('./route/playerRoute'));
+app.use('/associacao', require('./route/associacaoRoute'));
+app.use('/clicks', require('./route/clickRoute'));
+app.use('/escolhas_minigame', require('./route/escolha_minigameRoute'));
+app.use('/fluxos', require('./route/fluxoRoute'));
 
 app.use(function (error, req, res, next) {
 	if (error.message === 'Post already exists') {

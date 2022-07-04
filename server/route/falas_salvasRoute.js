@@ -4,7 +4,7 @@ const falas_salvasService = require('../service/falas_salvasService');
 const associacaoService = require("../service/associacaoService");
 
 
-router.post('/falas_salvas/:id_player', async function (req, res, next) {
+router.post('/:id_player', async function (req, res, next) {
 	const fala = req.body;
 	try {
 		const newData = await falas_salvasService.saveFala(fala);
@@ -19,7 +19,7 @@ router.post('/falas_salvas/:id_player', async function (req, res, next) {
 	}
 });
 
-router.get('/falas_salvas/showall',async function(req, res,next){
+router.get('/showall',async function(req, res,next){
 	const data = req.body;
 	try {
 		const newData = await falas_salvasService.getFalas();

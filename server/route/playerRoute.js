@@ -3,7 +3,7 @@ const router = express.Router();
 const playerService = require("../service/playerService");
 const associacaoService = require("../service/associacaoService");
 
-router.post("/player/:id_aluno", async function (req, res, next) {
+router.post("/:id_aluno", async function (req, res, next) {
   const player = req.body;
   try {
     const newPlayer = await playerService.savePlayer(player);

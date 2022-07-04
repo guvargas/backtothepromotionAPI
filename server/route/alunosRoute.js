@@ -3,7 +3,7 @@ const router = express.Router();
 const alunosService = require('../service/alunosService');
 
 
-router.post('/alunos', async function (req, res, next) {
+router.post('/', async function (req, res, next) {
 	const aluno = req.body;
 	try {
 		const newAluno = await alunosService.saveAluno(aluno);
@@ -13,7 +13,7 @@ router.post('/alunos', async function (req, res, next) {
 	}
 });
 
-router.get('/alunos/:matricula', async function (req, res, next) {
+router.get('/:matricula', async function (req, res, next) {
 	const aluno = req.body;
 	try {
 		const newAluno = await alunosService.getAluno(req.params.matricula);

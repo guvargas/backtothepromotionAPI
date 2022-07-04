@@ -3,7 +3,7 @@ const router = express.Router();
 const escolha_minigameService = require("../service/escolha_minigameService");
 const associacaoService = require("../service/associacaoService");
 
-router.post("/escolha_minigame/:id_player", async function (req, res, next) {
+router.post("/escolhas_minigame:id_player", async function (req, res, next) {
   const data = req.body;
   try {
     const newData = await escolha_minigameService.saveEscolhaMinigame(data);
@@ -17,7 +17,7 @@ router.post("/escolha_minigame/:id_player", async function (req, res, next) {
   }
 });
 
-router.get("/escolha_minigame/showall",async function(req, res,next){
+router.get("/showall",async function(req, res,next){
 	const data = req.body;
 	try {
 		const newData = await escolha_minigameService.getEscolhas();

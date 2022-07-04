@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const postsService = require('../service/postsService');
 
-router.get('/posts', async function (req, res, next) {
+router.get('/', async function (req, res, next) {
 	try {
 		const posts = await postsService.getPosts();
 		res.json(posts);
@@ -11,7 +11,7 @@ router.get('/posts', async function (req, res, next) {
 	}
 });
 
-router.post('/posts', async function (req, res, next) {
+router.post('/', async function (req, res, next) {
 	const post = req.body;
 	try {
 		const newPost = await postsService.savePost(post);
@@ -21,7 +21,7 @@ router.post('/posts', async function (req, res, next) {
 	}
 });
 
-router.put('/posts/:id', async function (req, res, next) {
+router.put('/:id', async function (req, res, next) {
 	const post = req.body;
 	try {
 		await postsService.updatePost(req.params.id, post);
@@ -31,7 +31,7 @@ router.put('/posts/:id', async function (req, res, next) {
 	}
 });
 
-router.delete('/posts/:id', async function (req, res, next) {
+router.delete('/:id', async function (req, res, next) {
 	try {
 		await postsService.deletePost(req.params.id);
 		res.status(204).end();
