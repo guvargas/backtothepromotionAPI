@@ -30,4 +30,16 @@ router.get('/showall', async function (req, res, next) {
 	}
 });
 
+
+router.get('/filter', async function (req, res, next) {
+	const data = req.body;
+	try {
+		const newData = await clickService.filter(data);
+		console.log(newData);
+		res.status(200).json(newData);
+	} catch (e) {
+		next(e);
+	}
+});
+
 module.exports = router;

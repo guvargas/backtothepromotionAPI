@@ -1,3 +1,4 @@
+const { response } = require("express");
 const clickData = require("../data/clickData.js");
 
 exports.saveClick = async function (data) {
@@ -19,4 +20,20 @@ exports.getClicks = async function () {
 
   return clickData.getClicks();
 };
+
+
+
+exports.filter = async function (data) {
+  if (data.student != null && data.initialDate != null && data.finalDate != null && data.filter != null) {
+
+    //regex anti sql injection
+    
+    //pega a data, le, e cria o -> de caminhamento de um pro outro pra cada player
+    // just do id copilot
+    return clickData.filter(data);
+  }
+  //aqui ele trata a resposta
+
+};
+
 
