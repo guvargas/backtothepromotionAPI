@@ -29,13 +29,6 @@ exports.getClicks = async function () {
   return clickData.getClicks();
 };
 
-exports.filter = async function (data) {
-  filterRaw(data);
-
-  // format to string and return
-
-}
-
 exports.filterRaw = async function (data) {
   //if request is ok
   if (
@@ -59,7 +52,6 @@ exports.filterRaw = async function (data) {
     let click_map = new Map();
     let timestamps = [];
     let path = [];
-
 
     // let clickMap = [{
     //     id_aluno,
@@ -104,52 +96,57 @@ exports.filterRaw = async function (data) {
           timestamps: [],
           path: [],
         };
+
+        let id = "id_aluno:"+element.id_aluno;
+        
         tempObj.timestamps.push(element.horario.getTime());
         tempObj.path.push(element.objeto);
         games.push(tempObj);
-        click_map.set(element.id_aluno, games);
+        
+        click_map.set(id, games);
       }
     });
 
-    //for each
-    // click_map.forEach((element, key) => {
-    //   console.log("-----------COMECO--------------------");
-    //   console.log(key + " : ");
-    //   element.forEach((elemen) => {
-
-    //     console.log(elemen);
-    //     // elemen.forEach((eleme) => {
-    //     //     console.log(eleme);
-    //     //   });
-    //   });
-    //   console.log("-----------FIM--------------------");
-    // });
-
-    /*
-
-    if (count == data_clicks.length) {
-      let pathString = "";
-
-      for (let j = 0; j < count; j++) {
-        if (j == count - 1) pathString += data_clicks[j].objeto;
-        else pathString += data_clicks[j].objeto + "=> ";
-      }
-      console.log("array: " + pathString);
-
-      data_clicks = [
-        {
-          ...data_clicks[count],
-          objeto: pathString,
-        },
-      ];
-
-      count = 0;
-    }*/
-
-    // console.log(data_clicks);
-
-    // just do id copilot
     return click_map;
   }
   //aqui ele trata a resposta
+};
+
+exports.filter = async function (data) {
+  let dataClickRaw = await this.filterRaw(data);
+  let answer = [];
+  // format to string and return
+  dataClickRaw.forEach((element) => {
+    element.forEach((dataPlayer) => {
+      let caminho = "";
+
+      let count = 0;
+      let length = dataPlayer.timestamps.length - 1;
+      totalSeconds = (dataPlayer.timestamps[length] - dataPlayer.timestamps[0]) / 1000
+      hours = Math.floor(totalSeconds / 3600)
+      minutes = Math.floor((totalSeconds % 3600) / 60)
+      seconds = Math.floor((totalSeconds % 3600) % 60)
+      // console.log(hours, minutes, seconds)
+
+
+      dataPlayer.path.forEach((ph) => {
+        if (dataPlayer.path.length - 1 == count) {
+          caminho += ph;
+
+        } else {
+          caminho += ph + " =>";
+        }
+        count++;
+      });
+    //  console.log(element);
+      answer.push({
+        id_aluno: key,
+        elapsedTime: "Tempo gasto: " + minutes + "min " + seconds + "s ",
+        route: caminho
+      });
+
+      //console.log(tempo);
+    });
+  });
+  return element;
 };

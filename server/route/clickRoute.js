@@ -34,7 +34,8 @@ router.get('/filter', async function (req, res, next) {
 	const data = req.body;
 	try {
 		const newData = await clickService.filter(data);
-		res.status(200).json(Object.fromEntries(newData));
+		
+		res.status(200).json(newData);
 	} catch (e) {
 		next(e);
 	}
