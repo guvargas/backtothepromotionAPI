@@ -23,7 +23,7 @@ exports.filter = function (data) {
 
 
 
-exports.filter = function (data) {
+exports.filterRaw = async function (data) {
 
   return database.many("select apl.id_player, " +
     "apl.id_aluno, " +
