@@ -109,7 +109,7 @@ exports.filter = async function (data) {
   let answer = [];
 
   dataClickRaw.forEach((element, key) => {
-    let id_aluno;
+    let id_aluno; // id_aluno do aluno
     element.forEach((dataPlayer) => {
       let caminho = "";
 
@@ -130,8 +130,9 @@ exports.filter = async function (data) {
         count++;
       });
 
+      // if don't have answer yet then create.
       if (answer.length == 0) {
-        id_aluno = key;
+        id_aluno = key; // update id_aluno for get new key value.
 
         answer.push({
           id_aluno: key,
@@ -141,6 +142,8 @@ exports.filter = async function (data) {
         });
       } else {
         if (id_aluno != key) {
+          // verify if id_aluno is different from last answer element. 
+          // if different then create new answer element (new aluno play the game).
           answer.push({
             id_aluno: key,
             id_player: dataPlayer.id_player,
@@ -148,10 +151,16 @@ exports.filter = async function (data) {
             route: caminho,
           });
         } else {
-          answer[answer.length - 1].route;
 
           for (let index = 0; index < answer.length; index++) {
-            if (answer[index]["id_aluno"] == key) {
+            // search for id_aluno in answer array for change answer array for put new element content
+            if (answer[index]["id_aluno"] == id_aluno) { 
+              /*
+              * talvez esse if e else de para tirar, eu usei ele para não da pau se não tive nenhum elemento, 
+              * mas talvez de para inicia-lo antes de tudo.
+              */
+
+              // if others_games is empty then put new element in others_games.
               if(answer[index]["others_games"] == null){
                 answer[index] = {
                   ...answer[index],
@@ -167,6 +176,7 @@ exports.filter = async function (data) {
                 }
 
               } else {
+                // if others_games is not empty then put new element in others_games and persist data older.
                 answer[index]["others_games"].push({
                   id_player: dataPlayer.id_player,
                   elapsedTime:

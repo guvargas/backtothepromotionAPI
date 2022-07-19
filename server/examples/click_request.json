@@ -1,91 +1,20 @@
 [
     {
-        "id_aluno": 18,
-        "id_player": 14,
-        "elapsedTime": "Tempo gasto: 12min 40s ",
-        "route": "PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer"
-    },
-    {
-        "id_aluno": 6,
-        "id_player": 28,
-        "elapsedTime": "Tempo gasto: 9min 28s ",
-        "route": "PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro"
-    },
-    {
-        "id_aluno": 27,
-        "id_player": 19,
-        "elapsedTime": "Tempo gasto: 14min 52s ",
-        "route": "PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro"
-    },
-    {
-        "id_aluno": 37,
-        "id_player": 27,
-        "elapsedTime": "Tempo gasto: 13min 46s ",
-        "route": "PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro"
-    },
-    {
-        "id_aluno": 2,
-        "id_player": 31,
-        "elapsedTime": "Tempo gasto: 8min 26s ",
-        "route": "PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer"
-    },
-    {
-        "id_aluno": 35,
-        "id_player": 29,
-        "elapsedTime": "Tempo gasto: 16min 38s ",
-        "route": "PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer",
-        "others_games": [
-            {
-                "id_player": 146,
-                "elapsedTime": "Tempo gasto: 6min 29s ",
-                "route": "PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada"
-            }
-        ]
-    },
-    {
-        "id_aluno": 13,
-        "id_player": 17,
-        "elapsedTime": "Tempo gasto: 18min 34s ",
-        "route": "PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada"
-    },
-    {
-        "id_aluno": 36,
-        "id_player": 32,
-        "elapsedTime": "Tempo gasto: 11min 38s ",
-        "route": "PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada",
-        "others_games": [
-            {
-                "id_player": 153,
-                "elapsedTime": "Tempo gasto: 2min 36s ",
-                "route": "PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer"
-            }
-        ]
-    },
-    {
-        "id_aluno": 1,
-        "id_player": 16,
-        "elapsedTime": "Tempo gasto: 12min 29s ",
-        "route": "PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada"
-    },
-    {
-        "id_aluno": 29,
-        "id_player": 13,
-        "elapsedTime": "Tempo gasto: 13min 38s ",
-        "route": "PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>Arbitro =>Arbitro =>Arbitro =>Arbitro",
-        "others_games": [
-            {
-                "id_player": 150,
-                "elapsedTime": "Tempo gasto: 6min 22s ",
-                "route": "Diretora =>Diretora =>Diretora =>Diretora =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada"
-            }
-        ]
-    },
-    {
         "id_aluno": 38,
-        "id_player": 42,
-        "elapsedTime": "Tempo gasto: 13min 14s ",
-        "route": "PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer",
+        "id_player": 5,
+        "elapsedTime": "Tempo gasto: 9min 6s ",
+        "route": "PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada",
         "others_games": [
+            {
+                "id_player": 6,
+                "elapsedTime": "Tempo gasto: 6min 19s ",
+                "route": "PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada"
+            },
+            {
+                "id_player": 42,
+                "elapsedTime": "Tempo gasto: 13min 14s ",
+                "route": "PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer"
+            },
             {
                 "id_player": 55,
                 "elapsedTime": "Tempo gasto: 0min 8s ",
@@ -335,6 +264,87 @@
                 "id_player": 257,
                 "elapsedTime": "Tempo gasto: 3min 55s ",
                 "route": "PersonagemRecepcionista =>Diretora =>TeacherContainer =>Arbitro =>PessoaArquibancada"
+            }
+        ]
+    },
+    {
+        "id_aluno": 18,
+        "id_player": 14,
+        "elapsedTime": "Tempo gasto: 12min 40s ",
+        "route": "PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer"
+    },
+    {
+        "id_aluno": 6,
+        "id_player": 28,
+        "elapsedTime": "Tempo gasto: 9min 28s ",
+        "route": "PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro"
+    },
+    {
+        "id_aluno": 27,
+        "id_player": 19,
+        "elapsedTime": "Tempo gasto: 14min 52s ",
+        "route": "PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro"
+    },
+    {
+        "id_aluno": 37,
+        "id_player": 27,
+        "elapsedTime": "Tempo gasto: 13min 46s ",
+        "route": "PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro"
+    },
+    {
+        "id_aluno": 2,
+        "id_player": 31,
+        "elapsedTime": "Tempo gasto: 8min 26s ",
+        "route": "PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer"
+    },
+    {
+        "id_aluno": 35,
+        "id_player": 29,
+        "elapsedTime": "Tempo gasto: 16min 38s ",
+        "route": "PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer",
+        "others_games": [
+            {
+                "id_player": 146,
+                "elapsedTime": "Tempo gasto: 6min 29s ",
+                "route": "PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>Diretora =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada"
+            }
+        ]
+    },
+    {
+        "id_aluno": 13,
+        "id_player": 17,
+        "elapsedTime": "Tempo gasto: 18min 34s ",
+        "route": "PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada"
+    },
+    {
+        "id_aluno": 36,
+        "id_player": 32,
+        "elapsedTime": "Tempo gasto: 11min 38s ",
+        "route": "PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada",
+        "others_games": [
+            {
+                "id_player": 153,
+                "elapsedTime": "Tempo gasto: 2min 36s ",
+                "route": "PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer"
+            }
+        ]
+    },
+    {
+        "id_aluno": 1,
+        "id_player": 16,
+        "elapsedTime": "Tempo gasto: 12min 29s ",
+        "route": "PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada"
+    },
+    {
+        "id_aluno": 29,
+        "id_player": 13,
+        "elapsedTime": "Tempo gasto: 13min 38s ",
+        "route": "PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>Arbitro =>Arbitro =>Arbitro =>Arbitro",
+        "others_games": [
+            {
+                "id_player": 150,
+                "elapsedTime": "Tempo gasto: 6min 22s ",
+                "route": "Diretora =>Diretora =>Diretora =>Diretora =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>PersonagemRecepcionista =>Diretora =>Diretora =>Diretora =>Diretora =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>TeacherContainer =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>Arbitro =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada =>PessoaArquibancada"
             }
         ]
     }
