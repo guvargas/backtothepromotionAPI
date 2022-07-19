@@ -8,10 +8,28 @@
             "elapsedTime": "2min"
         }
     ],
-    "id3": 
-    [{
-            "completePath": "casa => trabalho",
-            "elapsedTime": "2min"
+    "data": [
+        {
+            "id_aluno": 18, 
+            "values": [
+                {
+                    "completePath": "casa => trabalho",
+                    "elapsedTime": "2min"
+                },
+                {
+                    "completePath": "casa => mercado => trabalho",
+                    "elapsedTime": "2min"
+                }
+            ] 
+        },
+        {
+            "id_aluno": 19, 
+            "values": [
+                {
+                    "completePath": "casa => trabalho",
+                    "elapsedTime": "4min"
+                }
+            ] 
         }
     ]
 }

@@ -1,12 +1,6 @@
-const {
-  debug
-} = require("console");
-const {
-  response
-} = require("express");
-const {
-  isNumberObject
-} = require("util/types");
+const { debug } = require("console");
+const { response } = require("express");
+const { isNumberObject } = require("util/types");
 const clickData = require("../data/clickData.js");
 
 exports.saveClick = async function (data) {
@@ -97,13 +91,11 @@ exports.filterRaw = async function (data) {
           path: [],
         };
 
-        let id = "id_aluno:"+element.id_aluno;
-        
         tempObj.timestamps.push(element.horario.getTime());
         tempObj.path.push(element.objeto);
         games.push(tempObj);
-        
-        click_map.set(id, games);
+
+        click_map.set(element.id_aluno, games);
       }
     });
 
@@ -115,38 +107,81 @@ exports.filterRaw = async function (data) {
 exports.filter = async function (data) {
   let dataClickRaw = await this.filterRaw(data);
   let answer = [];
-  // format to string and return
-  dataClickRaw.forEach((element) => {
+
+  dataClickRaw.forEach((element, key) => {
+    let id_aluno;
     element.forEach((dataPlayer) => {
       let caminho = "";
 
       let count = 0;
       let length = dataPlayer.timestamps.length - 1;
-      totalSeconds = (dataPlayer.timestamps[length] - dataPlayer.timestamps[0]) / 1000
-      hours = Math.floor(totalSeconds / 3600)
-      minutes = Math.floor((totalSeconds % 3600) / 60)
-      seconds = Math.floor((totalSeconds % 3600) % 60)
-      // console.log(hours, minutes, seconds)
-
+      totalSeconds =
+        (dataPlayer.timestamps[length] - dataPlayer.timestamps[0]) / 1000;
+      hours = Math.floor(totalSeconds / 3600);
+      minutes = Math.floor((totalSeconds % 3600) / 60);
+      seconds = Math.floor((totalSeconds % 3600) % 60);
 
       dataPlayer.path.forEach((ph) => {
         if (dataPlayer.path.length - 1 == count) {
           caminho += ph;
-
         } else {
           caminho += ph + " =>";
         }
         count++;
       });
-    //  console.log(element);
-      answer.push({
-        id_aluno: key,
-        elapsedTime: "Tempo gasto: " + minutes + "min " + seconds + "s ",
-        route: caminho
-      });
 
-      //console.log(tempo);
+      if (answer.length == 0) {
+        id_aluno = key;
+
+        answer.push({
+          id_aluno: key,
+          id_player: dataPlayer.id_player,
+          elapsedTime: "Tempo gasto: " + minutes + "min " + seconds + "s ",
+          route: caminho,
+        });
+      } else {
+        if (id_aluno != key) {
+          answer.push({
+            id_aluno: key,
+            id_player: dataPlayer.id_player,
+            elapsedTime: "Tempo gasto: " + minutes + "min " + seconds + "s ",
+            route: caminho,
+          });
+        } else {
+          answer[answer.length - 1].route;
+
+          for (let index = 0; index < answer.length; index++) {
+            if (answer[index]["id_aluno"] == key) {
+              if(answer[index]["others_games"] == null){
+                answer[index] = {
+                  ...answer[index],
+
+                  "others_games" : [
+                      {
+                        id_player: dataPlayer.id_player,
+                        elapsedTime:
+                          "Tempo gasto: " + minutes + "min " + seconds + "s ",
+                        route: caminho,
+                      },
+                  ]
+                }
+
+              } else {
+                answer[index]["others_games"].push({
+                  id_player: dataPlayer.id_player,
+                  elapsedTime:
+                    "Tempo gasto: " + minutes + "min " + seconds + "s ",
+                  route: caminho,
+                });
+              }
+            }
+          }
+        }
+
+        id_aluno = key;
+      }
     });
   });
-  return element;
+
+  return answer;
 };
