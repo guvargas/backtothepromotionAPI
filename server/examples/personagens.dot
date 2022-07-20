@@ -1,0 +1,54 @@
+strict digraph G {
+splines=true; esep=0;
+recepcionista -> Diretora[penwidth=4, label="12"]
+Diretora -> Elevador[penwidth=3.6666666666666665, label="11"]
+Elevador -> professor[penwidth=3.3333333333333335, label="10"]
+professor -> Arbitro[penwidth=4.333333333333333, label="13"]
+Arbitro -> arqum[penwidth=6, label="18"]
+arqum -> arqdois[penwidth=6, label="18"]
+arqdois -> Arbitro[penwidth=2.3333333333333335, label="7"]
+Arbitro -> PortaSaidaEstadio[penwidth=3, label="9"]
+PortaSaidaEstadio -> PortaSaidaEstadio[penwidth=6, label="18"]
+PortaSaidaEstadio -> professor[penwidth=3.3333333333333335, label="10"]
+professor -> PortaSaidaEstadio[penwidth=3, label="9"]
+PortaSaidaEstadio -> Arbitro[penwidth=2, label="6"]
+arqdois -> PortaSaidaEstadio[penwidth=2.6666666666666665, label="8"]
+arqum -> arqum[penwidth=1.6666666666666667, label="5"]
+arqdois -> arqdois[penwidth=1.6666666666666667, label="5"]
+Arbitro -> Arbitro[penwidth=1.6666666666666667, label="5"]
+Diretora -> Diretora[penwidth=1.3333333333333333, label="4"]
+Diretora -> recepcionista[penwidth=0.6666666666666666, label="2"]
+arqdois -> arqum[penwidth=2.3333333333333335, label="7"]
+arqum -> PortaSaidaEstadio[penwidth=1.3333333333333333, label="4"]
+professor -> professor[penwidth=2, label="6"]
+Elevador -> Elevador[penwidth=1, label="3"]
+Elevador -> recepcionista[penwidth=1, label="3"]
+recepcionista -> Elevador[penwidth=0.6666666666666666, label="2"]
+arqum -> Arbitro[penwidth=1.3333333333333333, label="4"]
+arqum -> professor[penwidth=1, label="3"]
+professor -> arqum[penwidth=0.6666666666666666, label="2"]
+PortaSaidaEstadio -> arqdois[penwidth=0.3333333333333333, label="1"]
+arqdois -> professor[penwidth=0.6666666666666666, label="2"]
+professor -> arqdois[penwidth=0.3333333333333333, label="1"]
+Elevador -> Diretora[penwidth=0.3333333333333333, label="1"]
+Arbitro -> arqdois[penwidth=1.3333333333333333, label="4"]
+Elevador -> Arbitro[penwidth=0.3333333333333333, label="1"]
+PortaSaidaEstadio -> arqum[penwidth=0.6666666666666666, label="2"]
+}
+/*
+
+
+PersonagemRecepcionista -> Diretora -> TeacherContainer -> Arbitro -> PessoaArquibancada -> Arquibancadadois -> Arbitro -> TeacherContainer -> Arbitro -> PessoaArquibancada -> Arquibancadadois -> TeacherContainer
+PersonagemRecepcionista -> Diretora -> TeacherContainer -> Arbitro -> PessoaArquibancada -> PessoaArquibancada -> Arquibancadadois -> Arquibancadadois -> Arbitro -> Arbitro
+PersonagemRecepcionista -> Diretora -> Diretora -> Diretora -> Diretora -> Diretora -> PersonagemRecepcionista -> Diretora -> TeacherContainer -> Arbitro -> PessoaArquibancada -> Arquibancadadois -> Arquibancadadois -> PessoaArquibancada -> Arquibancadadois -> Arbitro -> PessoaArquibancada -> TeacherContainer -> TeacherContainer -> Arbitro
+PersonagemRecepcionista -> Diretora -> PersonagemRecepcionista -> Diretora -> TeacherContainer -> PessoaArquibancada -> Arquibancadadois -> Arbitro -> PessoaArquibancada -> TeacherContainer -> Arquibancadadois -> Arbitro
+PersonagemRecepcionista -> Diretora -> TeacherContainer -> Arbitro -> PessoaArquibancada -> Arquibancadadois -> PessoaArquibancada -> TeacherContainer -> TeacherContainer
+PersonagemRecepcionista -> PersonagemRecepcionista -> Diretora -> TeacherContainer -> Arbitro -> PessoaArquibancada -> Arquibancadadois -> Arbitro -> PessoaArquibancada -> Arquibancadadois -> PessoaArquibancada -> Arbitro -> Arbitro -> PessoaArquibancada -> Arquibancadadois -> PessoaArquibancada -> TeacherContainer
+PersonagemRecepcionista -> Diretora -> TeacherContainer -> TeacherContainer -> Arbitro -> PessoaArquibancada -> Arquibancadadois -> TeacherContainer -> Arbitro -> PessoaArquibancada -> Arquibancadadois -> Arquibancadadois -> PessoaArquibancada -> TeacherContainer -> TeacherContainer -> TeacherContainer -> Arquibancadadois -> TeacherContainer -> TeacherContainer -> Arbitro -> PessoaArquibancada -> PessoaArquibancada -> PessoaArquibancada
+PersonagemRecepcionista -> Diretora -> TeacherContainer -> Arbitro -> PessoaArquibancada -> Arquibancadadois -> TeacherContainer -> Arbitro -> TeacherContainer -> PessoaArquibancada -> Arquibancadadois
+PersonagemRecepcionista -> Diretora -> TeacherContainer -> Arbitro -> Arbitro -> Arquibancadadois -> TeacherContainer -> Arbitro -> Arquibancadadois -> PessoaArquibancada
+PersonagemRecepcionista -> Diretora -> Arbitro -> Arbitro -> PessoaArquibancada -> Arquibancadadois -> Arquibancadadois -> TeacherContainer -> TeacherContainer -> Arbitro -> Arbitro -> PessoaArquibancada -> Arquibancadadois -> PessoaArquibancada -> Arbitro -> PessoaArquibancada -> Arquibancadadois -> Arbitro
+PersonagemRecepcionista -> Diretora -> TeacherContainer -> Arbitro -> PessoaArquibancada -> Arbitro -> Arbitro -> PessoaArquibancada -> Arbitro -> Arquibancadadois -> Arquibancadadois -> Arbitro -> Arbitro -> Arquibancadadois -> PessoaArquibancada -> PessoaArquibancada -> PessoaArquibancada -> Arquibancadadois -> TeacherContainer
+
+
+*/

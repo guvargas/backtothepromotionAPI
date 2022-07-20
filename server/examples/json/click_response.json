@@ -1,0 +1,75 @@
+[
+    {
+        "id_aluno": 18,
+        "id_player": 14,
+        "elapsedTime": "12m40s",
+        "route": "PersonagemRecepcionista -> Diretora -> TeacherContainer -> Arbitro -> PessoaArquibancada -> Arquibancada dois  -> Arbitro -> TeacherContainer -> Arbitro -> PessoaArquibancada -> Arquibancada dois  -> TeacherContainer"
+    },
+    {
+        "id_aluno": 6,
+        "id_player": 28,
+        "elapsedTime": "9m28s",
+        "route": "PersonagemRecepcionista -> Diretora -> TeacherContainer -> Arbitro -> PessoaArquibancada -> PessoaArquibancada -> Arquibancada dois  -> Arquibancada dois  -> Arbitro -> Arbitro"
+    },
+    {
+        "id_aluno": 27,
+        "id_player": 19,
+        "elapsedTime": "14m52s",
+        "route": "PersonagemRecepcionista -> Diretora -> Diretora -> Diretora -> Diretora -> Diretora -> PersonagemRecepcionista -> Diretora -> TeacherContainer -> Arbitro -> PessoaArquibancada -> Arquibancada dois  -> Arquibancada dois  -> PessoaArquibancada -> Arquibancada dois  -> Arbitro -> PessoaArquibancada -> TeacherContainer -> TeacherContainer -> Arbitro"
+    },
+    {
+        "id_aluno": 37,
+        "id_player": 27,
+        "elapsedTime": "13m46s",
+        "route": "PersonagemRecepcionista -> Diretora -> PersonagemRecepcionista -> Diretora -> TeacherContainer -> PessoaArquibancada -> Arquibancada dois  -> Arbitro -> PessoaArquibancada -> TeacherContainer -> Arquibancada dois  -> Arbitro"
+    },
+    {
+        "id_aluno": 2,
+        "id_player": 31,
+        "elapsedTime": "8m26s",
+        "route": "PersonagemRecepcionista -> Diretora -> TeacherContainer -> Arbitro -> PessoaArquibancada -> Arquibancada dois  -> PessoaArquibancada -> TeacherContainer -> TeacherContainer"
+    },
+    {
+        "id_aluno": 35,
+        "id_player": 29,
+        "elapsedTime": "16m38s",
+        "route": "PersonagemRecepcionista -> PersonagemRecepcionista -> Diretora -> TeacherContainer -> Arbitro -> PessoaArquibancada -> Arquibancada dois  -> Arbitro -> PessoaArquibancada -> Arquibancada dois  -> PessoaArquibancada -> Arbitro -> Arbitro -> PessoaArquibancada -> Arquibancada dois  -> PessoaArquibancada -> TeacherContainer"
+    },
+    {
+        "id_aluno": 13,
+        "id_player": 17,
+        "elapsedTime": "18m34s",
+        "route": "PersonagemRecepcionista -> Diretora -> TeacherContainer -> TeacherContainer -> Arbitro -> PessoaArquibancada -> Arquibancada dois  -> TeacherContainer -> Arbitro -> PessoaArquibancada -> Arquibancada dois  -> Arquibancada dois  -> PessoaArquibancada -> TeacherContainer -> TeacherContainer -> TeacherContainer -> Arquibancada dois  -> TeacherContainer -> TeacherContainer -> Arbitro -> PessoaArquibancada -> PessoaArquibancada -> PessoaArquibancada"
+    },
+    {
+        "id_aluno": 36,
+        "id_player": 32,
+        "elapsedTime": "12m34s",
+        "route": "PersonagemRecepcionista -> Diretora -> TeacherContainer -> Arbitro -> PessoaArquibancada -> Arquibancada dois  -> TeacherContainer -> Arbitro -> TeacherContainer -> PessoaArquibancada -> Arquibancada dois "
+    },
+    {
+        "id_aluno": 1,
+        "id_player": 16,
+        "elapsedTime": "12m29s",
+        "route": "PersonagemRecepcionista -> Diretora -> TeacherContainer -> Arbitro -> Arbitro -> Arquibancada dois  -> TeacherContainer -> Arbitro -> Arquibancada dois  -> PessoaArquibancada"
+    },
+    {
+        "id_aluno": 29,
+        "id_player": 13,
+        "elapsedTime": "13m38s",
+        "route": "PersonagemRecepcionista -> Diretora -> Arbitro -> Arbitro -> PessoaArquibancada -> Arquibancada dois  -> Arquibancada dois  -> TeacherContainer -> TeacherContainer -> Arbitro -> Arbitro -> PessoaArquibancada -> Arquibancada dois  -> PessoaArquibancada -> Arbitro -> PessoaArquibancada -> Arquibancada dois  -> Arbitro"
+    },
+    {
+        "id_aluno": 38,
+        "id_player": 42,
+        "elapsedTime": "13m14s",
+        "route": "PersonagemRecepcionista -> Diretora -> TeacherContainer -> Arbitro -> PessoaArquibancada -> Arbitro -> Arbitro -> PessoaArquibancada -> Arbitro -> Arquibancada dois  -> Arquibancada dois  -> Arbitro -> Arbitro -> Arquibancada dois  -> PessoaArquibancada -> PessoaArquibancada -> PessoaArquibancada -> Arquibancada dois  -> TeacherContainer",
+        "others_games": [
+            {
+                "id_player": 55,
+                "elapsedTime": "0m8s",
+                "route": "PersonagemRecepcionista -> PersonagemRecepcionista"
+            }
+        ]
+    }
+]

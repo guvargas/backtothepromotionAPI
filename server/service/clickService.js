@@ -2,6 +2,7 @@ const { debug } = require("console");
 const { response } = require("express");
 const { isNumberObject } = require("util/types");
 const clickData = require("../data/clickData.js");
+const { map } = require("../infra/database.js");
 
 exports.saveClick = async function (data) {
   // const existingAluno = await escolha_minigameData.getAlunoByMatricula(aluno.matricula);
@@ -32,6 +33,7 @@ exports.filterRaw = async function (data) {
     data.filter != null
   ) {
     //regex anti sql injection
+   /*
     let re = new RegExp("/w*((%27)|('))((%6F)|o|(%4F))((%72)|r|(%52))/ix");
     if (re.test(data.student) || re.test(data.filter))
       throw new Error("Invalid input");
@@ -39,19 +41,24 @@ exports.filterRaw = async function (data) {
       data.student.filter((value) => {
         if (typeof value != "number") throw new Error("Invalid input");
       });
+      */
+      data.student.filter((value) => {
+        if (typeof value != "number") throw new Error("Invalid input");
+      });
 
     //pega a data, le, e cria o -> de caminhamento de um pro outro pra cada player
-
     let data_clicks = await clickData.filterRaw(data);
     let click_map = new Map();
     let timestamps = [];
     let path = [];
+    //console.log(data_clicks);
+   
 
     data_clicks.forEach((element) => {
       let games = [];
       let playerExist = false;
 
-
+      //
       if (click_map.has(element.id_aluno)) {
         games = click_map.get(element.id_aluno);
         games.forEach((game) => {
@@ -101,7 +108,7 @@ exports.filter = async function (data) {
   let answer = [];
 
   dataClickRaw.forEach((element, key) => {
-    console.log(element);
+    //   console.log(element);
     let id_aluno; // id_aluno do aluno
     element.forEach((dataPlayer) => {
       let caminho = "";
@@ -120,7 +127,7 @@ exports.filter = async function (data) {
         if (dataPlayer.path.length - 1 == count) {
           caminho += ph;
         } else {
-          caminho += ph + " =>";
+          caminho += ph + " -> ";
         }
         count++;
       });
@@ -136,8 +143,7 @@ exports.filter = async function (data) {
           route: caminho,
         });
       } // if have answer then check if it's the same player.
-      else 
-      {
+      else {
         // if it's NOT the same player then update the answer.
         if (id_aluno != key) {
           // verify if id_aluno is different from last answer element. 
@@ -175,7 +181,7 @@ exports.filter = async function (data) {
                 // if others_games is not empty then put new element in others_games and persist data older.
                 answer[index]["others_games"].push({
                   id_player: dataPlayer.id_player,
-                  elapsedTime:minutes + "m" + seconds + "s",
+                  elapsedTime: minutes + "m" + seconds + "s",
                   route: caminho,
                 });
               }
@@ -187,5 +193,39 @@ exports.filter = async function (data) {
       }
     });
   });
+
+  let mapa_qtd_umprooutro = new Map();
+
+  answer.forEach((element) => {
+    //console.log(element.route);
+    let rose = element.route.split(" -> ");
+    //for rose
+    for (let i = 0; i < rose.length; i++) {
+      if (i + 1 < rose.length) {
+        let key = rose[i] + " -> " + rose[i + 1];
+        let info;
+        if (mapa_qtd_umprooutro.has(key)) {
+          info = {
+            vezes: mapa_qtd_umprooutro.get(key).vezes + 1,
+            tempo: mapa_qtd_umprooutro.get(key).tempo
+          }
+          info.tempo.push(element.elapsedTime);
+          // console.log(mapa_qtd_umprooutro.get(rose[i] + rose[i + 1]));
+        } else {
+          info = {
+            vezes: 1,
+            tempo: []
+          }
+          info.tempo.push(element.elapsedTime);
+        }
+        mapa_qtd_umprooutro.set(key, info);
+      }
+    }
+  });
+
+  mapa_qtd_umprooutro.forEach((element, key) => {
+    console.log(key + '[penwidth=' + element.vezes / 3 + ', label="' + element.vezes + '"]');
+  });
+  //console.log(mapa_qtd_umprooutro);
   return answer;
 };

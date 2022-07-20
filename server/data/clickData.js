@@ -24,7 +24,7 @@ exports.filter = function (data) {
 
 
 exports.filterRaw = async function (data) {
-
+  console.log(data);
   return database.many("select apl.id_player, " +
     "apl.id_aluno, " +
     "tf.objeto, " +
@@ -35,7 +35,7 @@ exports.filterRaw = async function (data) {
     "where tf.horario between ($1) and ($2) " +
     "and tf.objeto IN ('" + data.filter.join("','") + "')" +
     "and apl.id_aluno IN (" + data.student.join(",") + ")" +
-    "order by tf.horario",
+    "   group by apl.id_player,apl.id_aluno,tf.objeto,tf.horario  order by tf.horario",
     [
       data.initialDate, data.finalDate
     ]);
