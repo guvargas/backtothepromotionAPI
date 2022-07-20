@@ -47,21 +47,10 @@ exports.filterRaw = async function (data) {
     let timestamps = [];
     let path = [];
 
-    // let clickMap = [{
-    //     id_aluno,
-    //     games: []
-    //   },
-    //   {
-    //     id_aluno: 34,
-    //     games: []
-    //   }
-    // ];
-
     data_clicks.forEach((element) => {
       let games = [];
       let playerExist = false;
 
-      //foreach clickmap
 
       if (click_map.has(element.id_aluno)) {
         games = click_map.get(element.id_aluno);
@@ -106,21 +95,27 @@ exports.filterRaw = async function (data) {
 
 exports.filter = async function (data) {
   let dataClickRaw = await this.filterRaw(data);
+  if (data.repeat == true) {
+
+  }
   let answer = [];
 
   dataClickRaw.forEach((element, key) => {
+    console.log(element);
     let id_aluno; // id_aluno do aluno
     element.forEach((dataPlayer) => {
       let caminho = "";
-
       let count = 0;
+
+      //transform the date to timestamp
       let length = dataPlayer.timestamps.length - 1;
-      totalSeconds =
-        (dataPlayer.timestamps[length] - dataPlayer.timestamps[0]) / 1000;
+      totalSeconds = (dataPlayer.timestamps[length] - dataPlayer.timestamps[0]) / 1000;
       hours = Math.floor(totalSeconds / 3600);
       minutes = Math.floor((totalSeconds % 3600) / 60);
       seconds = Math.floor((totalSeconds % 3600) % 60);
+      //-----------------------------------------------------
 
+      //gets the path of that player
       dataPlayer.path.forEach((ph) => {
         if (dataPlayer.path.length - 1 == count) {
           caminho += ph;
@@ -132,46 +127,47 @@ exports.filter = async function (data) {
 
       // if don't have answer yet then create.
       if (answer.length == 0) {
-        id_aluno = key; // update id_aluno for get new key value.
+        id_aluno = key; // update id_aluno to get new key value.
 
         answer.push({
           id_aluno: key,
           id_player: dataPlayer.id_player,
-          elapsedTime: "Tempo gasto: " + minutes + "min " + seconds + "s ",
+          elapsedTime: minutes + "m" + seconds + "s",
           route: caminho,
         });
-      } else {
+      } // if have answer then check if it's the same player.
+      else 
+      {
+        // if it's NOT the same player then update the answer.
         if (id_aluno != key) {
           // verify if id_aluno is different from last answer element. 
           // if different then create new answer element (new aluno play the game).
           answer.push({
             id_aluno: key,
             id_player: dataPlayer.id_player,
-            elapsedTime: "Tempo gasto: " + minutes + "min " + seconds + "s ",
+            elapsedTime: minutes + "m" + seconds + "s",
             route: caminho,
           });
         } else {
 
           for (let index = 0; index < answer.length; index++) {
-            // search for id_aluno in answer array for change answer array for put new element content
-            if (answer[index]["id_aluno"] == id_aluno) { 
+            // search for id_aluno in answer array for change answer array to put new element content
+            if (answer[index]["id_aluno"] == id_aluno) {
               /*
               * talvez esse if e else de para tirar, eu usei ele para não da pau se não tive nenhum elemento, 
               * mas talvez de para inicia-lo antes de tudo.
               */
 
               // if others_games is empty then put new element in others_games.
-              if(answer[index]["others_games"] == null){
+              if (answer[index]["others_games"] == null) {
                 answer[index] = {
                   ...answer[index],
-
-                  "others_games" : [
-                      {
-                        id_player: dataPlayer.id_player,
-                        elapsedTime:
-                          "Tempo gasto: " + minutes + "min " + seconds + "s ",
-                        route: caminho,
-                      },
+                  "others_games": [
+                    {
+                      id_player: dataPlayer.id_player,
+                      elapsedTime: minutes + "m" + seconds + "s",
+                      route: caminho,
+                    },
                   ]
                 }
 
@@ -179,8 +175,7 @@ exports.filter = async function (data) {
                 // if others_games is not empty then put new element in others_games and persist data older.
                 answer[index]["others_games"].push({
                   id_player: dataPlayer.id_player,
-                  elapsedTime:
-                    "Tempo gasto: " + minutes + "min " + seconds + "s ",
+                  elapsedTime:minutes + "m" + seconds + "s",
                   route: caminho,
                 });
               }
@@ -192,6 +187,5 @@ exports.filter = async function (data) {
       }
     });
   });
-
   return answer;
 };
