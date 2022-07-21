@@ -24,7 +24,6 @@ exports.filter = function (data) {
 
 
 exports.filterRaw = async function (data) {
-  console.log(data);
   return database.many("select apl.id_player, " +
     "apl.id_aluno, " +
     "tf.objeto, " +

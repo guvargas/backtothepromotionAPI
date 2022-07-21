@@ -1,5 +1,6 @@
 const { debug } = require("console");
 const { response } = require("express");
+const { getMaxListeners } = require("process");
 const { isNumberObject } = require("util/types");
 const clickData = require("../data/clickData.js");
 const { map } = require("../infra/database.js");
@@ -33,7 +34,7 @@ exports.filterRaw = async function (data) {
     data.filter != null
   ) {
     //regex anti sql injection
-   /*
+    /*
     let re = new RegExp("/w*((%27)|('))((%6F)|o|(%4F))((%72)|r|(%52))/ix");
     if (re.test(data.student) || re.test(data.filter))
       throw new Error("Invalid input");
@@ -42,17 +43,16 @@ exports.filterRaw = async function (data) {
         if (typeof value != "number") throw new Error("Invalid input");
       });
       */
-      data.student.filter((value) => {
-        if (typeof value != "number") throw new Error("Invalid input");
-      });
+
+    data.student.filter((value) => {
+      if (typeof value != "number") throw new Error("Invalid input");
+    });
 
     //pega a data, le, e cria o -> de caminhamento de um pro outro pra cada player
     let data_clicks = await clickData.filterRaw(data);
     let click_map = new Map();
     let timestamps = [];
     let path = [];
-    //console.log(data_clicks);
-   
 
     data_clicks.forEach((element) => {
       let games = [];
@@ -64,7 +64,13 @@ exports.filterRaw = async function (data) {
         games.forEach((game) => {
           if (element.id_player == game.id_player) {
             timestamps = game.timestamps.push(element.horario.getTime());
-            path = game.path.push(element.objeto);
+            if (data.repeat) {
+              if (element.objeto != game.path[game.path.length - 1]) {
+                path = game.path.push(element.objeto);
+              }
+            } else {
+              path = game.path.push(element.objeto);
+            }
             playerExist = true;
           }
         });
@@ -102,13 +108,10 @@ exports.filterRaw = async function (data) {
 
 exports.filter = async function (data) {
   let dataClickRaw = await this.filterRaw(data);
-  if (data.repeat == true) {
 
-  }
   let answer = [];
 
   dataClickRaw.forEach((element, key) => {
-    //   console.log(element);
     let id_aluno; // id_aluno do aluno
     element.forEach((dataPlayer) => {
       let caminho = "";
@@ -116,7 +119,8 @@ exports.filter = async function (data) {
 
       //transform the date to timestamp
       let length = dataPlayer.timestamps.length - 1;
-      totalSeconds = (dataPlayer.timestamps[length] - dataPlayer.timestamps[0]) / 1000;
+      totalSeconds =
+        (dataPlayer.timestamps[length] - dataPlayer.timestamps[0]) / 1000;
       hours = Math.floor(totalSeconds / 3600);
       minutes = Math.floor((totalSeconds % 3600) / 60);
       seconds = Math.floor((totalSeconds % 3600) % 60);
@@ -146,7 +150,7 @@ exports.filter = async function (data) {
       else {
         // if it's NOT the same player then update the answer.
         if (id_aluno != key) {
-          // verify if id_aluno is different from last answer element. 
+          // verify if id_aluno is different from last answer element.
           // if different then create new answer element (new aluno play the game).
           answer.push({
             id_aluno: key,
@@ -155,28 +159,26 @@ exports.filter = async function (data) {
             route: caminho,
           });
         } else {
-
           for (let index = 0; index < answer.length; index++) {
             // search for id_aluno in answer array for change answer array to put new element content
             if (answer[index]["id_aluno"] == id_aluno) {
               /*
-              * talvez esse if e else de para tirar, eu usei ele para não da pau se não tive nenhum elemento, 
-              * mas talvez de para inicia-lo antes de tudo.
-              */
+               * talvez esse if e else de para tirar, eu usei ele para não da pau se não tive nenhum elemento,
+               * mas talvez de para inicia-lo antes de tudo.
+               */
 
               // if others_games is empty then put new element in others_games.
               if (answer[index]["others_games"] == null) {
                 answer[index] = {
                   ...answer[index],
-                  "others_games": [
+                  others_games: [
                     {
                       id_player: dataPlayer.id_player,
                       elapsedTime: minutes + "m" + seconds + "s",
                       route: caminho,
                     },
-                  ]
-                }
-
+                  ],
+                };
               } else {
                 // if others_games is not empty then put new element in others_games and persist data older.
                 answer[index]["others_games"].push({
@@ -197,7 +199,6 @@ exports.filter = async function (data) {
   let mapa_qtd_umprooutro = new Map();
 
   answer.forEach((element) => {
-    //console.log(element.route);
     let rose = element.route.split(" -> ");
     //for rose
     for (let i = 0; i < rose.length; i++) {
@@ -207,15 +208,14 @@ exports.filter = async function (data) {
         if (mapa_qtd_umprooutro.has(key)) {
           info = {
             vezes: mapa_qtd_umprooutro.get(key).vezes + 1,
-            tempo: mapa_qtd_umprooutro.get(key).tempo
-          }
+            tempo: mapa_qtd_umprooutro.get(key).tempo,
+          };
           info.tempo.push(element.elapsedTime);
-          // console.log(mapa_qtd_umprooutro.get(rose[i] + rose[i + 1]));
         } else {
           info = {
             vezes: 1,
-            tempo: []
-          }
+            tempo: [],
+          };
           info.tempo.push(element.elapsedTime);
         }
         mapa_qtd_umprooutro.set(key, info);
@@ -223,9 +223,5 @@ exports.filter = async function (data) {
     }
   });
 
-  mapa_qtd_umprooutro.forEach((element, key) => {
-    console.log(key + '[penwidth=' + element.vezes / 3 + ', label="' + element.vezes + '"]');
-  });
-  //console.log(mapa_qtd_umprooutro);
   return answer;
 };

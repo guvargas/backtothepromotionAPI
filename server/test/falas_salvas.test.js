@@ -33,7 +33,6 @@ test("Should save a player and a fala and associate the two", async function () 
     "post",
     data
   );
-  console.log(response.data);
   expect(response.status).toBe(201);
   const fala_salva = response.data;
   expect(fala_salva.texto).toBe(data.texto);

@@ -5,7 +5,6 @@ const associacaoService = require("../service/associacaoService");
 
 router.post("/:id_player", async function (req, res, next) {
   const data = req.body;
-  //	console.log(req.body);
   try {
     const newData = await clickService.saveClick(data);
     const response = await associacaoService.associarPlayerClick(

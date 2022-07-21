@@ -30,7 +30,6 @@ test("Should save a player and a fluxo and associate the two", async function ()
     "post",
     data
   );
-//  console.log(respostaFluxo.data);
   expect(respostaFluxo.status).toBe(201);
   const response = respostaFluxo.data;
   expect(response.id_player).toBe(response.id_player);
